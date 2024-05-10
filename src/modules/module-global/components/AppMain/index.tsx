@@ -36,8 +36,9 @@ export default function AppMain() {
             )}>
             <React.Suspense fallback={null}>
                 <Routes>
-                    <Route path={`${ScreenPath.SHEET_1}/*`} element={<Sheet1Screen />} />
-                    <Route path={`${ScreenPath.SHEET_2}/*`} element={<Sheet2Screen />} />
+                    <Route path={ScreenPath.HOME} element={<div />} />
+                    <Route path={ScreenPath.SHEET_1} element={<Sheet1Screen />} />
+                    <Route path={ScreenPath.SHEET_2} element={<Sheet2Screen />} />
                     <Route path="*" element={<NotFoundScreen />} />
                 </Routes>
             </React.Suspense>
