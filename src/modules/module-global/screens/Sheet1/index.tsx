@@ -367,28 +367,10 @@ export default function Sheet1() {
 
     const renderContentKhau = (item: (typeof tableData)[number]) => (
         <Box className="flex flex-row w-full h-full">
-            {item.nc10.map(({ label }, index) => (
-                <Box key={index} className={`${classes.borderColor} flex items-center h-full gap-3 min-w-[100px] p-3`}>
-                    <Box className="flex flex-1">
-                        <Typography>{label}</Typography>
-                    </Box>
-                    <Box className="flex flex-1">
-                        <TextField type="number" className={classes.input} />
-                    </Box>
-                </Box>
-            ))}
-            {item.nc20.map(({ label }, index) => (
-                <Box key={index} className={`${classes.borderColor} flex items-center h-full gap-3 min-w-[100px] p-3`}>
-                    <Box className="flex flex-1">
-                        <Typography>{label}</Typography>
-                    </Box>
-                    <Box className="flex flex-1">
-                        <TextField type="number" className={classes.input} />
-                    </Box>
-                </Box>
-            ))}
-            {item.nc30.map(({ label }, index) => (
-                <Box key={index} className={`${classes.borderColor} flex items-center h-full gap-3 min-w-[100px] p-3`}>
+            {[...item.nc10, ...item.nc20, ...item.nc30].map(({ label }, index) => (
+                <Box
+                    key={index}
+                    className={`${classes.borderColor} flex flex-1 items-center h-full gap-3 min-w-[100px] p-3 border-t-0 border-b-0 border-l-0 ${index === 8 ? 'border-r-0' : ''}`}>
                     <Box className="flex flex-1">
                         <Typography>{label}</Typography>
                     </Box>
