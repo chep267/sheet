@@ -413,9 +413,6 @@ const useStyles = makeStyles(({ palette }) => ({
             border: `1px solid ${palette.divider}`,
         },
     },
-    border: {
-        border: `1px solid ${palette.divider}`,
-    },
     borderColor: {
         borderStyle: 'solid',
         borderColor: palette.divider,
